@@ -21,9 +21,17 @@ var mode = 0;
 
 function def() {
     mode = 0;
+    var status = document.getElementById("status");
+    status.innerHTML = "デフォルト";
 }
 function inp() {
     mode = 1;
+    var status = document.getElementById("status");
+    status.innerHTML = "元素入力";
+}
+function reset() {
+    list = [];
+    ctx.clearRect(0, 0, 800, 760);
 }
 
 canvas.onmousedown = function (e) {
@@ -44,11 +52,11 @@ canvas.onmousedown = function (e) {
     }
     for (var i = 0; i < 9; i++) {
         for (var j = 0; j < 16; j++) {
-            if (j * w + m - 5 <= mouseX && mouseX <= j * w + m + 5 && i * Math.sqrt(3) * w + m - 5 <= mouseY && mouseY <= i * Math.sqrt(3) * w + m + 5) {
+            if (j * w + m - 7 <= mouseX && mouseX <= j * w + m + 7 && i * Math.sqrt(3) * w + m - 7 <= mouseY && mouseY <= i * Math.sqrt(3) * w + m + 7) {
                 begin(j * w + m, i * Math.sqrt(3) * w + m);
                 return;
             }
-            if (j * w + (w / 2) + m - 5 <= mouseX && mouseX <= j * w + (w / 2) + m + 5 && (i + 0.5) * Math.sqrt(3) * w + m - 5 <= mouseY && mouseY <= (i + 0.5) * Math.sqrt(3) * w + m + 5) {
+            if (j * w + (w / 2) + m - 7 <= mouseX && mouseX <= j * w + (w / 2) + m + 7 && (i + 0.5) * Math.sqrt(3) * w + m - 7 <= mouseY && mouseY <= (i + 0.5) * Math.sqrt(3) * w + m + 7) {
                 begin((j + 0.5) * w + m, (i + 0.5) * Math.sqrt(3) * w + m);
                 return;
             };
