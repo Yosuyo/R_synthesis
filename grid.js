@@ -21,10 +21,10 @@ function draw2() {
     for (var i = 0; i < 9; i++) {
         for (var j = 0; j < 16; j++) {
             ctx.beginPath();
-            ctx.arc(j * w + m, i * Math.sqrt(3) * w + m, 3, 0, 2 * Math.PI, true);
+            ctx.arc(j * w + m, i * Math.sqrt(3) * w + m, 1, 0, 2 * Math.PI, true);
             ctx.stroke();
             ctx.beginPath();
-            ctx.arc(j * w + (w / 2) + m, (i + 0.5) * Math.sqrt(3) * w + m, 3, 0, 2 * Math.PI, true);
+            ctx.arc(j * w + (w / 2) + m, (i + 0.5) * Math.sqrt(3) * w + m, 1, 0, 2 * Math.PI, true);
             ctx.stroke();
         }
     }

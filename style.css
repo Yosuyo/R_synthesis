@@ -4,3 +4,8 @@
 .main{
     position: absolute;
 }
+#footer{
+    position: fixed;
+    bottom: 0%;
+    widows: 100%;
+}
