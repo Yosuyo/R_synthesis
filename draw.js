@@ -15,8 +15,6 @@ var mouseX, mouseY;
 var downX, downY;
 var drag = false;
 
-var list = [];
-
 var mode = 0;
 
 function def() {
