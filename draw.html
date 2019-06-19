@@ -14,15 +14,22 @@
         <canvas class="main" id="canvas1" width="800" height="760"></canvas>
         <canvas class="main" id="canvas2" width="800" height="760"></canvas>
     </div>
-    <script>
-        var list = [];
-    </script>
     <script type="text/javascript" src="grid.js"></script>
+    <script>
+        //リストに埋め込まれる情報
+        //[downX, downY, x, y, 結合次数]
+        var w = 50;
+        var m = 10;
+        var list = [];
+        var canvas = document.getElementById("canvas2");
+        var ctx = canvas.getContext("2d");
+    </script>
     <script type="text/javascript" src="draw.js"></script>
     <div id="footer">
         <button type="button" onclick="def()">デフォルト</button>
         <button type="button" onclick="inp()">元素入力</button>
         <button type="button" onclick="reset()">リセット</button>
+        <botton type="botton" onclick="cons()">コンソール</botton>
         <div id="status">デフォルト</div>
     </div>
 </body>
